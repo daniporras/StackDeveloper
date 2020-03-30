@@ -1,0 +1,23 @@
+<div class="masthead">
+<div class="jumbotron">
+        <div class="container">
+            <div *ngFor="let c of cultivos">
+                                
+                    <b>Nombre del Cultivo:</b> {{c.nombre_cultivo}}
+                <div class="row">
+                    <br/>                    
+                    <div class="col-md-6"> 
+                        <br/>                  
+                        <img src="{{c.url_cultivo}}" class="responsive"/>                        
+                    </div>
+                    <div class="col-md-6">                    
+                        <b>Descripción:</b>
+                        <br/>{{c.descripcion_cultivo}}                                                                       
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+</div>

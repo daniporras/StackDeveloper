@@ -1,0 +1,81 @@
+<!-- añadir bodega -->
+<div class="jumbotron">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="angForm" novalidate (ngSubmit)="onSubmit()">    
+                <!-- para la denominacion -->            
+                <div class="form-group">
+                        <label class="col-md-4">Denominación de Origen:</label>
+                        <input type="text" class="form-control" formControlName="nombre_denominacion"/>
+                </div>
+                <div *ngIf="angForm.controls['nombre_denominacion'].invalid && (angForm.controls['nombre_denominacion'].dirty || angForm.controls['nombre_denominacion'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm.controls['nombre_denominacion'].errors.required">
+                                La Denominación es obligatoria
+                   </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4">Ubicación de la denominacion:</label>
+                    <input type = "text"class="form-control" formControlName="ubicacion_denominacion"/>
+                </div>
+                <div *ngIf="angForm.controls['ubicacion_denominacion'].invalid && (angForm.controls['ubicacion_denominacion'].dirty || angForm.controls['ubicacion_denominacion'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm.controls['ubicacion_denominacion'].errors.required">
+                        La Ubicacion de la denominación es obligatoria
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4">Web de la denominacion:</label>
+                    <input type="text" class="form-control" formControlName="web_denominacion"/>
+                </div>
+                <div *ngIf="angForm.controls['web_denominacion'].invalid && (angForm.controls['web_denominacion'].dirty || angForm.controls['web_denominacion'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm.controls['web_denominacion'].errors.required">
+                        La Web de la denominación es obligatoria
+                    </div>
+                </div>
+                <!-- para la bodega-->
+                <div class="form-group">
+                    <label class="col-md-4">Nombre de la bodega:</label>
+                    <input type="text" class="form-control" formControlName="nombre_bodega"/>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-md-4">Ubicación de la bodega:</label>
+                    <input type="text" class="form-control" formControlName="ubicacion_bodega"/>
+                </div>
+
+
+                <div class="form-group">
+                        <label class="col-md-4">Teléfono de la bodega:</label>
+                        <input type="number" class="form-control" formControlName="telefono_bodega"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4">Web de la bodega:</label>
+                    <input type="text" class="form-control" formControlName="web_bodega"/>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-md-4">Email de la bodega:</label>
+                    <input type="text" class="form-control" formControlName="email_bodega"/>
+                </div>
+
+                
+                <!-- Para el tipo de uva-->
+                <div class="form-group">
+                        <label>Tinta</label>
+                        <input type="checkbox" class="form-control" formControlName="tinta" value="false" checked/>
+                        <label>Rosada</label>
+                        <input type="checkbox" class="form-control" formControlName="rosada" value="false" checked/>
+                        <label>Blanca</label>
+                        <input type="checkbox" class="form-control" formControlName="blanca" value="false"/>
+                
+                </div>
+                <div class="form-group">
+                        <!--<button (click)="addDenominacion(nombre_denominacion, ubicacion_denominacion,web_denominacion,nombre_bodega,ubicacion_bodega,
+                        telefono_bodega, web_bodega,email_bodega, blanca, tinta, rosado)" type="submit"                         
+                        class="btn btn-primary">Añadir Bodega y Denominacion</button>-->
+                        <button type="submit" class="btn btn-dark">Guardar denominacion y bodega</button>
+                      </div>
+            </form>
+        </div>
+    </div>       
+</div>

@@ -1,0 +1,66 @@
+
+<!--<p>Información sobre la bodega: <b>{{bodega}}</b></p>-->
+<!--<p *ngFor="let denominacion of denominaciones">
+    {{denominacion}}
+</p>-->
+<div class="jumbotron">
+<table class="table table-hover">
+        <!--<p> De la denominación: <b>{{denominacion}}</b></p>-->
+        <thead>
+                <tr>
+                    <th>Denominación</th>
+                    <th>Bodega</th>
+                    <th>Tipo uva</th>
+                    <th>Acciones</th>
+                </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let denominacion of denominaciones">            
+                <td> <b>{{denominacion.nombre_denominacion}}</b></td>
+                <td *ngFor="let bodega of denominacion.bodegas">
+                   Nombre de la bodega:    <b>{{bodega.nombre_bodega}}</b>  <br/>
+                   Ubicación de la bodega: <b>{{bodega.ubicacion_bodega}}</b><br/>
+                   Teléfono de la bodega:  <b>{{bodega.telefono_bodega}}</b><br/>
+                   Web de la bodega:       <b>{{bodega.web_bodega}}</b><br/>
+                   Email de la bodega:     <b>{{bodega.email_bodega}}</b><br/>
+                   <!--Tipo de vino: <br/>-->
+                
+                
+                        <!--a [routerLink]="['/bodega/', denominacion.nombre_denominacion,bodega.nombre_bodega]" class="btn btn-danger">{{ bodega.nombre_bodega}}</a>-->
+                        <!--<a [routerLink]="['/bodega/', denominacion._id]" class="btn btn-danger">{{ bodega.nombre_bodega}}</a>-->
+                        <!--<button (click)="info(bodega.nombre_bodega)" class="btn btn-primary">{{bodega.nombre_bodega}}</button>-->
+                
+                </td>
+                <!--<td>De la denominación: <b>{{denominacion.nombre_denominacion}}</b></td>-->
+                <td *ngFor="let bodega of denominacion.bodegas">
+                    Tipo de uva:<br/>
+                    <div *ngFor="let uvas of bodega.uva">
+                        <div *ngIf="uvas.blanca">
+                                Blanca: <b>Sí</b><br/>
+                        </div>
+                        <div *ngIf="uvas.tinta">
+                                Tinta: <b>Sí</b><br/>
+                        </div>
+                        <div *ngIf="uvas.rosado">
+                                Rosada: <b>Sí</b><br/>
+                        </div>
+                        <!--Blanca: {{uvas.blanca}}<br/>
+                        Tinta: {{uvas.tinta}}<br/>
+                        Rosada: {{uvas.rosado}}<br/>-->
+
+                    </div>
+                    <td *ngFor="let uva of bodega.uva">
+                        Blanco: {{uva.blanca}} <br/>
+                        Tinta: {{uva.tinta}} <br/>
+
+                </td>
+                <td *ngFor ="let bodega of denominacion.bodegas">
+                <a [routerLink]="['/bodega/edit',denominacion.nombre_denominacion, bodega.nombre_bodega]" class="btn btn-warning">MODIFICAR</a><br/>               
+                <br/><button (click)="handleClick(bodega.nombre_bodega)" type="button" class="btn btn-danger">ELIMINAR</button>
+
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

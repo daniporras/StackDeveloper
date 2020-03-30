@@ -1,0 +1,61 @@
+<ng2-slim-loading-bar color="blue"></ng2-slim-loading-bar>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index">
+      La Bodega 3.0
+    </a>
+  
+    <button class="navbar-toggler" type="button"
+            (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+  
+    <div class="collapse navbar-collapse show"
+         [ngClass]="{ 'show': navbarOpen }">
+      <ul class="navbar-nav mr-auto">
+          
+            <li class="nav-item">
+              <a routerLink="tienda" class="nav-link" routerLinkActive="active">
+                Tienda Online
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="bodegas" class="nav-link" routerLinkActive="active">
+                Denominaciones y Bodegas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="vinedos" class="nav-link" routerLinkActive="active">
+                Cultivos y Viñedos
+              </a>
+            </li> 
+            <li class="nav-item">
+              <a href="http://labodega.xyz" class="nav-link">
+                Blog de la Bodega
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="contacto" class="nav-link" routerLinkActive="active">
+                Contacto
+              </a>
+            </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a routerLink="perfil" class="nav-link" routerLinkActive="active"><span class="glyphicon glyphicon-user"></span> Mi Viña</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="cesta" class="nav-link" routerLinkActive="active"><span class="glyphicon glyphicon-shopping-cart"></span> Mi cesta</a>
+          </li> 
+      </ul>
+    </div>
+  </nav>
+
+<div class="masthead">
+  <div class="container">     
+  <router-outlet></router-outlet>
+  
+  </div>
+ 
+</div>
+

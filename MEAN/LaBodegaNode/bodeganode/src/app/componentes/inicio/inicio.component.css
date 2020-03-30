@@ -1,0 +1,21 @@
+.masthead{
+  /*height:auto;*/
+  height:100vh;
+  min-height:100vh;
+  background-image:url("https://www.losvinos.com.ar/wp-content/uploads/2019/03/Cabernet-Sauvignon-2.jpg");
+  background-size:cover;
+  background-position:center;
+  background-repeat: repeat;
+}
+h1{
+  margin-top:0;
+  color:#fff;
+  padding:40px;
+  box-sizing:border-box;
+  background:rgba(0,0,0,0.5);
+  font-family:Sans-Serif;
+}
+.lead-in{
+  padding-top:30vh;
+  text-align:center;
+}

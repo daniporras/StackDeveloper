@@ -1,0 +1,21 @@
+.jumbotron {
+    /* background: none*/
+    background: rgb(200, 54, 54); /* This is for ie8 and below */
+    background: rgba(200, 54, 54, 0.5); 
+    text-align: center;
+ }
+ label{
+     color: white;
+ }
+ .header{
+     color: white;
+     font-size: xx-large;
+ }
+ hr{
+     border-color: white;
+ }
+
+ .responsive{
+    width: 90%;
+    height: auto;
+ }

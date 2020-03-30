@@ -1,0 +1,17 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let p of productos">
+            <mat-card style='width:auto;'>
+                <img src="{{p.imagen}}" class="responsive">
+                <mat-card-content class="responsive">
+                        <h3>{{ p.nombre }}</h3>
+                        <p> {{ p.descripcion }}</p>
+                        <p> </p>
+                </mat-card-content>
+                    <div class="md-actions" layout="row" layout-align="end center">
+                        <button (click)="handleClick(p.nombre, p.descripcion, p.precio, p.unidades)" mat-raised-button color="primary">COMPRAR</button>                                      
+                    </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well well-sm">
+                    <div class="panel panel-default">                            
+                        <div class="text-center header"><b>Contacta con nosotros</b></div>
+                    </div>
+                    <form [formGroup]="angForm" novalidate>                        
+                        <div class="form-group">
+                            <label class="center-block">Nombre y Apellidos:
+                        </label>
+                        <input class="form-control" placeholder="Introduzca su Nombre y Apellidos" formControlName="nombre_apellidos"/>
+
+                        </div>
+                        <div *ngIf="angForm.controls['nombre_apellidos'].invalid && (angForm.controls['nombre_apellidos'].dirty ||angForm.controls['nombre_apellidos'].touched)" class="alert alert-danger">
+                            <div *ngIf="angForm.controls['nombre_apellidos'].errors.required">
+                                Es necesario introducir un Nombre y Apellidos
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="center-block">Correo electrónico:
+                            </label>
+                        <input class="form-control" placeholder="Introduzca su correo electrónico" formControlName="email"/>
+
+                        </div>
+                        <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
+                                <div *ngIf="angForm.controls['email'].errors.required">
+                                    Es necesario introducir su email
+                                </div>
+                        </div>
+                        <div class="form-group">
+                                <label class="center-block">Teléfono 
+                                </label>
+                        <input class="form-control" placeholder="Introduzca su telefono" formControlName="telefono"/>
+                        </div>
+                        <div class="form-group">
+                                <label class="center-block">Mensaje
+                                    <!--textarea class="form-group"></textarea>-->
+                                </label>
+                                <!--<input type="textarea" class="form-control" placeholder="Comentario.." formControlName="comentario"/>-->
+                                <textarea type="text" class="form-control" mdbInput formControlName="comentario" placeholder="Introduzca su mensaje.."></textarea>
+
+                            <!--<textarea type="text" class="form-control" placeholder="Introduzca su correo eléctronico" formControlName="email"/>-->
+                        </div>                    
+                        <div class="form-group">
+                                <button mat-raised-button color="primary">Enviar Información</button>
+                        </div>
+                    </form>
+                    <!--<p>Form value: {{angForm.value | json }} </p>
+                    <p>Form status: {{angForm.status | json}}</p>-->
+                </div>               
+            </div>
+            <div class="col-md-6">                
+                <div class="panel panel-default">
+                    <div class="text-center header"><b>Nuestras Oficinas</b></div>
+                    <div class="panel-body text-center">
+                            <label>Calle La Compañia, Salamanca</label>  <br/>                    
+                            <label>Telefono: +34 923923923</label><br/>
+                            <label>Email: contacto@bodega3.0.com</label>                            
+                            <hr /> 
+                            <img src="../../../assets/img/contacto.png" class="responsive" />                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

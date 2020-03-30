@@ -1,0 +1,22 @@
+<div class="jumbotron">
+        <!--<div class="row">-->
+
+                <p><b>¡Cesta de productos!</b></p>
+                <br/><p></p>
+                <div *ngFor = "let v of ventas">
+                        <b>Nombre:</b> {{v.nombre}} <br/>
+                        Descripción: {{v.descripcion}}<br/>
+                        <b>Precio:</b> {{v.precio}}<br/>
+                        
+                </div>
+
+                <br/>
+                <br/><b>Acciones disponibles</b><br/>
+                <button type="button" class="btn btn-success">Pagar ahora</button>
+                <button [routerLink]="['/cesta']" (click)="handleClick()" type="button" class="btn btn-danger">Vaciar cesta</button>
+                
+                
+                
+                
+        <!--</div>-->
+</div>

@@ -1,0 +1,21 @@
+<div class="jumbotron">
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td><b>Nombre de la Denominación</b></td>
+            <td><b>Bodegas que forman la denominacion:</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let denominacion of denominaciones">
+            <td><b  class="btn btn-dark">{{ denominacion.nombre_denominacion}}</b></td>     
+            <td *ngFor="let bodega of denominacion.bodegas">     
+                <a [routerLink]="['/bodega/', denominacion.nombre_denominacion,bodega.nombre_bodega]" class="btn btn-dark">{{ bodega.nombre_bodega}}</a>
+                    <!--<a [routerLink]="['/bodega/', denominacion._id]" class="btn btn-danger">{{ bodega.nombre_bodega}}</a>-->
+                    <!--<button (click)="info(bodega.nombre_bodega)" class="btn btn-primary">{{bodega.nombre_bodega}}</button>-->     
+            </td>
+        </tr>    
+    </tbody>  
+</table>
+
+</div>

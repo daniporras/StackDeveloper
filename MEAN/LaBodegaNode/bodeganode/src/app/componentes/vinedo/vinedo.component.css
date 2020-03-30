@@ -1,0 +1,35 @@
+jumbotron {
+    /* background: none*/
+    background: rgb(200, 54, 54); /* This is for ie8 and below */
+    background: rgba(200, 54, 54, 0.5); 
+    text-align: center;
+    color: white;
+ }
+
+container{
+    color: white;
+}
+.responsive{
+    width: 90%;
+    height: auto;
+ }
+ .masthead{
+    background-image: none;
+    /*height:auto;*/
+    /*height:100vh;*/
+    /*min-height:100vh;*/
+    /*background-image:url("https://images.unsplash.com/photo-1525377411535-0cacd7ffe6fb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fad61054be723285bf879a0fbf1c6350&auto=format&fit=crop&w=2134&q=80"),url("https://www.losvinos.com.ar/wp-content/uploads/2019/03/Cabernet-Sauvignon-2.jpg");*/
+    /*background-image:url("https://www.losvinos.com.ar/wp-content/uploads/2019/03/Cabernet-Sauvignon-2.jpg");*/
+    /*background-size:cover;
+    background-position:center;*/
+    /*background-repeat: repeat;*/
+    /*background-repeat: repeat;*/
+
+  }
+  :host{
+      background-image: none;
+  }
+  :host-context{
+      background: none;
+      background-image:none;
+  }
